@@ -1,0 +1,58 @@
+/* Definir o grid */
+.content{
+
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 11.4rem 1fr;
+
+    grid-template-areas:
+    'header header'
+    'left right'
+
+}
+
+/* Localização do header */
+header{
+    grid-area: header;
+}
+
+/* Introduzirt a imagem */
+#bg{
+    grid-area: left;
+
+    background: url('/assets/home_bg_img.svg') no-repeat top/contain;
+}
+
+/* Localização do main */
+main{
+    grid-area: right;
+
+    display: flex;
+
+    align-items: center;
+}
+
+/* Largura do container do main */
+main.container{
+    width: min(36.3rem 100%);
+}
+
+/* Características dos elementos h2 */
+main h2{
+    font-family: 'Poppins', sans-serif;
+    color: var(--black);
+    font-size: clamp(20px, 5vw, 2.8rem);
+    margin-bottom: 2.4rem;
+}
+
+/* Caixinha de input */
+input{
+    border: .2rem solid var(--grey-blue);
+    padding: 0 1.6rem;
+}
+
+/* Inputs e buttons */
+input, button, .button {
+    width: 100%;
+    margin-bottom: 1.8rem;
+}
