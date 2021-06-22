@@ -33,6 +33,7 @@
 }
 
 #room header .buttons .button:nth-child(2) img{
+    margin-right: .9rem;
     width: 2rem;
     height: 2rem;
 }
