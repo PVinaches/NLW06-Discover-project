@@ -20,7 +20,7 @@ header{
 #bg{
     grid-area: left;
 
-    background: url('/assets/home_bg_img.svg') no-repeat top/contain;
+    background: url('/assets/home-bg-img.svg') no-repeat top/contain;
 }
 
 /* Localização do main */
@@ -30,11 +30,13 @@ main{
     display: flex;
 
     align-items: center;
+    margin-top: -14rem;
+
 }
 
 /* Largura do container do main */
-main.container{
-    width: min(36.3rem 100%);
+main .container{
+    width: min(36.3rem, 100%);
 }
 
 /* Características dos elementos h2 */
