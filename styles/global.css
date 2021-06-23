@@ -96,7 +96,7 @@ button:hover, .button:hover {
 }
 
 /* Localização das imagens dos buttons */
-button > img
+button > img,
 .button > img{
     margin-right: 1rem;
     width: 2rem;
