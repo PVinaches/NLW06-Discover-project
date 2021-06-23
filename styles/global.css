@@ -28,6 +28,8 @@ html{
     --hover-red: #EA4B65;
     --hover-green: #8794A7;
 
+    --violet: #303B9F;
+
     /* Ajustar o tamanho da letra de acordo com o padrão do navegador */
     font-size: 62.5%; /* 10px - baseado num root font size de 16px*/
 
