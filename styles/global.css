@@ -19,9 +19,10 @@ html{
     --overlay: #040911;
     --icons-details: #A5B0C1;
 
-    --grey-dark-gray: #4D5E77;
+    --grey-dark: #4D5E77;
     --grey-blue: #A1B2CD;
     --grey-light: #E5EAF1;
+    --grey-medium: #EAECF2;
 
     --hover-blue: #5699FF;
     --hover-red: #EA4B65;
@@ -53,7 +54,7 @@ body, button, input, textarea {
     margin: 0 auto;
 }
 
-/* Para as labels */
+/* Labels */
 .sr-only {
     position: absolute;
     height: 1px;
@@ -91,7 +92,8 @@ button, .button {
 }
 
 /* Hover dos buttons */
-button:hover, .button:hover {
+button:hover,
+.button:hover {
     filter: brightness(1.2);
 }
 
@@ -108,6 +110,18 @@ button.outlined,
     background: var(--white);
     color: var(--blue);
     border: .2rem solid var(--blue);
+}
+
+button.red,
+.button.red {
+    background: var(--red);
+    color: var(--white);
+}
+
+button.grey,
+.button.grey {
+    background: var(--grey-light);
+    color: var(--grey-dark);
 }
 
 /* Localização do header */
