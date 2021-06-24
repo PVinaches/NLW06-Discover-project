@@ -131,7 +131,7 @@
     display: flex;
     align-items: center;
 
-    cursor: url("../assets/hand.svg"), auto;
+    cursor: url("../images/hand.svg"), auto;
 }
 
 .question-wrapper .actions > a > img {
@@ -141,7 +141,7 @@
 .question-wrapper .actions > a + a {
     margin-left: 2.4rem;
 
-    cursor: url("../assets/hand.svg"), auto;
+    cursor: url("../images/hand.svg"), auto;
 }
 
 .question-wrapper.read {
