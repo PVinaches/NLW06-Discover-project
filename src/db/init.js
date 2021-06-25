@@ -1,5 +1,5 @@
 // Importar config da base de dados
-const Database = require('./config')
+const Database = require('../db/config')
 
 // Iniciar tabelas
 const initDb = {
@@ -15,8 +15,9 @@ const initDb = {
         // Criar tabela de questions
         await db.exec(`CREATE TABLE questions (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
-            titulo TEXT,
-            read INT
+            title TEXT,
+            read INT,
+            room INT
         )`);
 
         await db.close()

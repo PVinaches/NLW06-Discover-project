@@ -13,13 +13,18 @@ const route = express.Router()
 // Indicar as páginas a renderizar
 route.get('/', (req, res) => res.render("index", {page: 'enter-room'}))
 route.get('/create-pass', (req, res) => res.render("index", {page: 'create-pass'}))
-route.get('/room/:room', (req, res) => res.render("room"))
+route.get('/room/:roomId', RoomController.open)
+
+// Criar uma nova sala
+route.post('/create-room', RoomController.create)
+
+// Criar questions
+route.post('/question/create/:room', QuestionController.create)
 
 // Formato que o formulario da modal tem que passar os dados
 route.post('/question/:room/:question/:action', QuestionController.index)
 
-// Criar uma nova sala
-route.post('/create-room', RoomController.create)
+
 
 
 module.exports = route
