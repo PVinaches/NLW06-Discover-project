@@ -78,6 +78,10 @@
 
                     <div class="questions">
 
+                        <% if (isNoQuestions){ %>
+                            <%- include('parts/noquestion') %>
+                        <% } %>
+
                         <!-- Perguntas não lidas -->
                         <% questions.forEach(question => { %>
                             <div class="question-wrapper">
@@ -114,14 +118,14 @@
                                     </div>
 
                                     <div class="question">
-                                        <p><% questionsRead.title %></p>
+                                        <p><%= questionsRead.title %></p>
                                     </div>
                                 </div>
 
                                 <div class="actions">
-                                    <a href="#" class="delete" data-id="<%= question.id %>">
-                                        <img src="../images/check.svg" alt="Excluir">
-                                        Pergunta lida
+                                    <a href="#" class="delete" data-id="<%= questionsRead.id %>">
+                                        <img src="../images/trash.svg" alt="Excluir">
+                                        Excluir
                                     </a>
                                 </div>
                             </div>

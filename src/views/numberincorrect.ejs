@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+    <head>        
+        <title>Dato incorreta</title>
+        <script>
+            
+
+            // Redireccionar a página original
+            <% if(option){ %>
+                // Alerta de sala incorreta
+                confirm("Sala incorreta")
+                
+                window.location.replace("/")
+
+            <%}else{ %>
+                // Alerta de senha incorreta
+                confirm("Senha incorreta")
+                
+                window.location.replace("/room/<%= roomId %>")
+            <% } %>
+            
+        </script>
+    </head>
+</html>

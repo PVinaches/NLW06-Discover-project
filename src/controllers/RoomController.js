@@ -19,7 +19,7 @@ module.exports = {
         
             // Comprovar que é novo e único na base de dados
             const roomsExistIds = await db.all(`SELECT id FROM rooms`)
-            isRoom = roomsExistIds.some(roomsExistIds => roomsExistIds === roomId)
+            isRoom = roomsExistIds.some(roomExistIds => roomExistIds.id === roomId)
 
             if(!isRoom){
                 // Inserir na base de dados
@@ -51,7 +51,32 @@ module.exports = {
         const questions = await db.all(`SELECT * FROM questions WHERE room = ${roomId} and read = 0`)
         const questionsRead = await db.all(`SELECT * FROM questions WHERE room = ${roomId} and read = 1`)
 
+        // Verificar se tem questions
+        let isNoQuestions
+        if (questions.length == 0 && questionsRead.length == 0) {
+            isNoQuestions = true
+        }
+
         // Renderizar a página
-        res.render("room", {roomId: roomId, questions: questions, questionsRead: questionsRead})
+        res.render("room", {roomId: roomId, questions: questions, questionsRead: questionsRead, isNoQuestions: isNoQuestions})
+    },
+
+    // Entrar na sala
+    async enter(req, res){
+        const db = await Database()
+
+        const roomNumber = req.body.roomId
+
+        // Comprovar que esa sala existe
+        const roomsExistId = await db.all(`SELECT id FROM rooms`)
+        let isRoomNumber = roomsExistId.some(roomExistId => roomExistId.id == roomNumber)
+
+        if(isRoomNumber){
+            res.redirect(`/room/${roomNumber}`)
+        }else{
+            res.render('numberincorrect', {option: true})
+        }
+
+
     }
 }

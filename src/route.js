@@ -18,6 +18,9 @@ route.get('/room/:roomId', RoomController.open)
 // Criar uma nova sala
 route.post('/create-room', RoomController.create)
 
+// Entrar na sala
+route.post('/enterroom', RoomController.enter)
+
 // Criar questions
 route.post('/question/create/:room', QuestionController.create)
 
