@@ -5,17 +5,23 @@
             
 
             // Redireccionar a página original
-            <% if(option){ %>
+            <% if(option === "1"){ %>
                 // Alerta de sala incorreta
                 confirm("Sala incorreta")
                 
                 window.location.replace("/")
 
-            <%}else{ %>
+            <%}else if(option === "2") { %>
                 // Alerta de senha incorreta
                 confirm("Senha incorreta")
                 
                 window.location.replace("/room/<%= roomId %>")
+
+            <%}else if(option === "3") { %>
+                // Alerta de senha incorreta
+                confirm("Precisa uma senha")
+                
+                window.location.replace("/create-pass")
             <% } %>
             
         </script>

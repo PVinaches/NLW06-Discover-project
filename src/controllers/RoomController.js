@@ -8,6 +8,11 @@ module.exports = {
 
         const pass = req.body.password
 
+        // Comprovar que tenha senha escrita
+        if(!pass){
+            res.render('numberincorrect', {option: "3"})
+        }
+
         let roomId
         let isRoom = true
         while(isRoom){
@@ -74,7 +79,7 @@ module.exports = {
         if(isRoomNumber){
             res.redirect(`/room/${roomNumber}`)
         }else{
-            res.render('numberincorrect', {option: true})
+            res.render('numberincorrect', {option: "1"})
         }
 
 

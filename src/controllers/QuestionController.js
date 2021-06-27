@@ -29,7 +29,7 @@ module.exports = {
             res.redirect(`/room/${roomId}`)
         }else{
             // Renderizar página de error
-            res.render('numberincorrect', {roomId: roomId, option: false})
+            res.render('numberincorrect', {roomId: roomId, option: "2"})
         }
 
         
