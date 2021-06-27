@@ -12,6 +12,12 @@
     justify-content: space-between;
 }
 
+/* Alineamento do dark mode slider */
+#room .switch-dark-mode{
+    top: 0;
+}
+
+
 /* Buttons do header */
 #room header .buttons {
     display: flex;

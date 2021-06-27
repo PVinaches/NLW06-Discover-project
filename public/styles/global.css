@@ -30,6 +30,8 @@ html{
 
     --violet: #303B9F;
 
+    --modal: rgba(4, 9, 17, .8);
+
     /* Ajustar o tamanho da letra de acordo com o padrão do navegador */
     font-size: 62.5%; /* 10px - baseado num root font size de 16px*/
 

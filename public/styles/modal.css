@@ -13,7 +13,7 @@
     left: 0;
     display: flex;
 
-    background: rgba(4, 9, 17, .8);
+    background: var(--modal);
 
     visibility: hidden;
     opacity: 0;
