@@ -11,11 +11,9 @@ module.exports = {
         const questionId = req.params.question
         const action = req.params.action
         const password = req.body.password
-        console.log(password)
 
         // Verificar se a senha está correta
         const verifyRoom = await db.get(`SELECT * FROM rooms WHERE id = ${roomId}`)
-        console.log(verifyRoom.pass)
         if(verifyRoom.pass == password){
             // Deletar a question
             if(action == "delete"){
